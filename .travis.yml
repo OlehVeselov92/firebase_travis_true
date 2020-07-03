@@ -8,6 +8,8 @@ install:
 deploy:
   on:
     tags: true
+    # Only build tags
+if: tag IS present
   provider: firebase
   token: 
     secure: 
