@@ -6,10 +6,6 @@ script:
 install:
     - npm install -g firebase-tools 
 deploy:
-  on:
-    tags: true
-    # Only build tags
-if: tag IS present
   provider: firebase
   token: 
     secure: 
