@@ -7,10 +7,12 @@ install:
     - npm install -g firebase-tools 
 deploy:
   provider: firebase
+  on: 
+    tags: true
   token: 
     secure: 
   project: "questions-veselov"
   after_success:
   - firebase deploy --token $FIREBASE_TOKEN
-  if: tag IS present
+
   
